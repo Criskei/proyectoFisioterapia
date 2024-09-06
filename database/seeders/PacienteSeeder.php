@@ -2,6 +2,8 @@
 
 namespace Database\Seeders;
 
+use App\Models\paciente;
+use App\Models\User;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -12,6 +14,11 @@ class PacienteSeeder extends Seeder
      */
     public function run(): void
     {
-        //
+        User::factory()
+            ->state([
+                'rol_id' => 3,
+            ])
+            ->count(50)
+            ->create();
     }
 }

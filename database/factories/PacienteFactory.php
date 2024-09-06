@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\paciente;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -9,6 +10,7 @@ use Illuminate\Database\Eloquent\Factories\Factory;
  */
 class PacienteFactory extends Factory
 {
+    protected $model = paciente::class;
     /**
      * Define the model's default state.
      *
@@ -16,8 +18,8 @@ class PacienteFactory extends Factory
      */
     public function definition(): array
     {
-        return [
-            //
+        return [            
+            'fecha_nac' => $this->faker->dateTimeBetween('-18 years', '-1 years'),
         ];
     }
 }

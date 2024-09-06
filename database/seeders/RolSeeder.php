@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\rol;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -12,6 +13,10 @@ class RolSeeder extends Seeder
      */
     public function run(): void
     {
-        //
+        rol::insert([
+            ['nombre' => 'Administrador'],
+            ['nombre' => 'Fisioterapeuta'],
+            ['nombre' => 'Paciente']
+        ]);
     }
 }
