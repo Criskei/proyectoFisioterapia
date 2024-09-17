@@ -33,10 +33,10 @@ defineProps({
             <template #contenidoTabla>
                 <tr v-for="(p, index) in pacientes " :key="index">
                     <checkbox/>
-                    <contenidoTabla>{{ p.usuario.nombres }}</contenidoTabla>
-                    <contenidoTabla>{{ p.usuario.apellidos }}</contenidoTabla>
-                    <contenidoTabla>{{ p.usuario.celular }}</contenidoTabla>
-                    <contenidoTabla>{{ p.usuario.email }}</contenidoTabla>
+                    <contenidoTabla>{{ p.nombres }}</contenidoTabla>
+                    <contenidoTabla>{{ p.apellidos}}</contenidoTabla>
+                    <contenidoTabla>{{ p.celular }}</contenidoTabla>
+                    <contenidoTabla>{{ p.email }}</contenidoTabla>
                     <td class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                         <div class="flex items-center space-x-4">
                             <button type="button" data-modal-target="updateProductModal"
@@ -51,8 +51,8 @@ defineProps({
                                         clip-rule="evenodd" />
                                 </svg>
                                 Editar
-                            </button>
-                            <Link :href="route('paciente.ver', { id: p.paciente_id})" 
+                            </button>                            
+                            <Link :href="route('paciente.ver', { id: p.usuario_id})" 
                                 class="py-2 px-3 flex items-center text-sm font-medium text-center text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-primary-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" fill="currentColor"
                                     class="w-4 h-4 mr-2 -ml-0.5">

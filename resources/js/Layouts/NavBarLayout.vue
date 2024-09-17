@@ -25,8 +25,7 @@ import ResponsiveNavLink from '@/Components/ResponsiveNavLink.vue';
                     </svg>
                 </button>
                 <a href="/dashboard" class="flex items-center justify-between mr-4">
-                    <img src="images/logoDiente.png" class="mr-3 h-10" alt="SirDental Logo" />
-                    <img src="images/sirdental.png" class="mr-3 h-8" alt="SirDental Text" />
+                    <img src="images/logo.png" class="mr-3 h-10" alt="SirDental Logo" />
                 </a>
             </div>
 

@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\PacienteController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\ReporteUsuarioController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
@@ -34,4 +35,9 @@ Route::get('/paciente/{id}', [PacienteController::class, 'show'])
 Route::get('/pacienteEdit/{id}', [PacienteController::class, 'edit'])
     ->middleware(['auth', 'verified'])->name('paciente.editar');
 
-require __DIR__.'/auth.php';
+Route::get('/pacienteNuevo', [PacienteController::class, 'store'])
+    ->middleware(['auth', 'verified'])->name('paciente.nuevo');
+
+Route::get('/reporte-usuarios', [ReporteUsuarioController::class, 'generarPDF'])->name('reporte.usuarios');
+
+require __DIR__ . '/auth.php';

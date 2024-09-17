@@ -64,15 +64,12 @@ const props = defineProps({
                         <td class="label">Correo</td>
                         <td>{{ usuario.email }}</td>
                     </tr>
-                    <tr class="info-container">
-                        <td class="label">Fecha de nacimiento</td>
-                        <td>{{ paciente.fecha_nac }}</td>
-                    </tr>
+                    
                 </tbody>
             </table>
         </cardLayout>
 
-        <cardLayout>
+        <!-- <cardLayout>
             <template #tituloCard>
                 Tratamientos
             </template>
@@ -142,9 +139,9 @@ const props = defineProps({
                     </tr>
                 </template>
             </tablaCRUDLayout>
-        </cardLayout>
+        </cardLayout> -->
 
-        <cardLayout>
+        <!-- <cardLayout>
             <template #tituloCard>
                 Citas
             </template>
@@ -272,7 +269,7 @@ const props = defineProps({
                     </tr>
                 </template>
             </tablaCRUDLayout>
-        </cardLayout>
+        </cardLayout> -->
     </AuthenticatedLayout>
 </template>
 <style scoped>
