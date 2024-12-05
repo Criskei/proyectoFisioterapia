@@ -7,6 +7,13 @@ use Illuminate\Database\Eloquent\Model;
 
 class tipos_ejercicio extends Model
 {
-    protected $primaryKey = "tipo_ejercicio_id";
+    protected $table = 'tipos_ejercicios';
+    protected $primaryKey = 'id_tipo_ejercicio';
     use HasFactory;
+
+    public function ejercicios()
+    {
+        return $this->hasMany(ejercicio::class, 'id_tipo_ejercicio', 'id_tipo_ejercicio');
+    }
+    
 }

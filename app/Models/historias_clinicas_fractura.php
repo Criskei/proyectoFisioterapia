@@ -7,5 +7,15 @@ use Illuminate\Database\Eloquent\Model;
 
 class historias_clinicas_fractura extends Model
 {
+    protected $table = 'historias_clinicas_fracturas';
+    public $incrementing = false;
+    protected $primaryKey = 'id_historia';
+    public $timestamps = false;
     use HasFactory;
+
+    public function historia_clinica()
+    {
+        return $this->belongsTo(historias_clinica::class, 'id_historia', 'id_historia');
+    }
+    
 }

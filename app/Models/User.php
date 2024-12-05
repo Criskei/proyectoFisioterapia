@@ -10,8 +10,23 @@ use Illuminate\Notifications\Notifiable;
 class User extends Authenticatable
 {
     protected $table = 'usuarios';
-    protected $primaryKey = 'usuario_id';
+    protected $primaryKey = 'id_usuario';
     use HasFactory, Notifiable;
+
+    public function rol()
+    {
+        return $this->belongsTo(rol::class, 'id_rol', 'id_rol');
+    }
+
+    public function peciente()
+    {
+        return $this->hasOne(paciente::class, 'id_usuario', 'id_usuario');
+    }
+
+    public function fisioterapeuta()
+    {
+        return $this->hasOne(fisioterapeuta::class, 'id_usuario', 'id_usuario');
+    }
 
     /**
      * The attributes that are mass assignable.
