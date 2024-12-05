@@ -12,17 +12,18 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('ejercicios', function (Blueprint $table) {
-            $table->id('ejercicio_id');
-            $table->foreignId('tipo_ejercicio_id');
-            $table->foreignId('dificultad_id');
-            $table->string('nombre');
-            $table->string('descripcion');
-            $table->string('url');
-            $table->string('duracion');
-            $table->boolean('activo');
-
-            $table->foreign('tipo_ejercicio_id')->references('tipo_ejercicio_id')->on('tipos_ejercicios');
-            $table->foreign('dificultad_id')->references('dificultad_id')->on('dificultades');
+            $table->id('id_ejercicio');
+            $table->foreignId('id_tipo_ejercicio')->constrained('tipos_ejercicios', 'id_tipo_ejercicio');
+            $table->foreignId('id_dificultad')->constrained('dificultades', 'id_dificultad');
+            $table->string('nombre', 100);
+            $table->text('descripcion')->nullable();
+            $table->text('instrucciones')->nullable();
+            $table->string('video_tutorial_url')->nullable()->comment('Ruta en la nube donde se almacena la animación');
+            $table->string('imagen_demostracion')->nullable()->comment('Ruta o URL de la imagen');
+            $table->integer('duracion_estimada')->nullable()->comment('Duración estimada en minutos');   
+            $table->boolean('requiere_supervision')->default(true);         
+            $table->boolean('activo')->default(true);
+            $table->timestamps();  
         });
     }
 

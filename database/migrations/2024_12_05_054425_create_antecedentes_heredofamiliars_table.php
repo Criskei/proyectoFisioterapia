@@ -11,9 +11,9 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('tipos_ejercicios', function (Blueprint $table) {
-            $table->id('id_tipo_ejercicio');
-            $table->string('nombre', 100);
+        Schema::create('antecedentes_heredofamiliares', function (Blueprint $table) {
+            $table->id('id_heredofamiliar');
+            $table->foreignId('id_paciente')->constrained('pacientes', 'id_paciente');
             $table->text('descripcion')->nullable();
             $table->boolean('activo')->default(true);
         });
@@ -24,6 +24,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('tipos_ejercicios');
+        Schema::dropIfExists('antecedentes_heredofamiliares');
     }
 };

@@ -12,11 +12,14 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('pacientes', function (Blueprint $table) {
-            $table->id('paciente_id');
-            $table->foreignId('usuario_id');
-            $table->dateTime('fecha_nacimiento');
-
-            $table->foreign('usuario_id')->references('usuario_id')->on('usuarios');
+            $table->id('id_paciente');
+            $table->foreignId('id_usuario')->constrained('usuarios', 'id_usuario');
+            $table->string('tutor_nombre', 100)->nullable();
+            $table->string('tutor_parentesco', 50)->nullable();
+            $table->date('fecha_ingreso');
+            $table->string('escolaridad', 100)->nullable();
+            $table->text('observaciones_generales')->nullable();
+            $table->boolean('activo')->default(true);
         });
     }
 

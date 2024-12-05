@@ -12,11 +12,12 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('fisioterapeutas', function (Blueprint $table) {
-            $table->id('fisioterapeuta_id');
-            $table->foreignId('usuario_id');
-            $table->string('especialidad');
-
-            $table->foreign('usuario_id')->references('usuario_id')->on('usuarios');
+            $table->id('id_fisioterapeuta');
+            $table->foreignId('id_usuario')->constrained('usuarios', 'id_usuario');
+            $table->string('especialidad', 100);
+            $table->string('cedula_profesional', 50)->nullable();
+            $table->date('fecha_graduacion')->nullable();
+            $table->boolean('activo')->default(true);             
         });
     }
 

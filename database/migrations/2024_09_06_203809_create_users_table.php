@@ -12,19 +12,19 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('usuarios', function (Blueprint $table) {
-            $table->id('usuario_id');
-            $table->foreignId('rol_id');
+            $table->id('id_usuario');
+            $table->foreignId('id_rol')->constrained('roles', 'id_rol');
             $table->string('nombres');
             $table->string('apellidos');
-            $table->integer('celular');
+            $table->integer('celular')->nullable();;
+            $table->date('fecha_nacimiento')->nullable();
+            $table->text('direccion')->nullable();
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->rememberToken();
             $table->timestamps();
-            $table->boolean('activo');
-
-            $table->foreign('rol_id')->references('rol_id')->on('roles');
+            $table->boolean('activo')->default(true);
         });
 
         Schema::create('password_reset_tokens', function (Blueprint $table) {
