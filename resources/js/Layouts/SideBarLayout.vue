@@ -1,4 +1,7 @@
-<script>
+<script setup>
+import { Link } from '@inertiajs/vue3';
+
+
 </script>
 
 <template>
@@ -69,20 +72,20 @@
                     </button>
                     <ul id="dropdown-pages" class="hidden py-2 space-y-2">
                         <li>
-                            <a href="#"
+                            <Link :href="route('paciente.index')"
                                 class="flex items-center p-2 pl-11 w-full text-base font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">
-                                Pacientes
-                            </a>
+                            Pacientes
+                            </Link>
                         </li>
                         <li>
-                            <a href="#"
+                            <Link :href="route('fisioterapeuta.index')"
                                 class="flex items-center p-2 pl-11 w-full text-base font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">
-                                Fisioterapeutas
-                            </a>
+                            Fisioterapeutas
+                            </Link>
                         </li>
                     </ul>
                 </li>
-                
+
                 <li>
                     <button type="button"
                         class="flex items-center p-2 w-full text-base font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
@@ -199,7 +202,13 @@
                         </svg>
                         <span class="ml-3">Copia de seguridad</span>
                     </a>
-                </li>            
+                </li>
+                <li>
+                    <Link :href="route('logout')" method="POST" as="button"
+                        class="flex items-center p-2 text-base font-medium text-gray-900 rounded-lg transition duration-75 hover:bg-gray-100 dark:hover:bg-gray-700 dark:text-white group">
+                    Cerrar Sesión
+                    </Link>
+                </li>
             </ul>
         </div>
 

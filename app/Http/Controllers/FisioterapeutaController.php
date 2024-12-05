@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\fisioterapeuta;
 use Illuminate\Http\Request;
+use Inertia\Inertia;
 
 class FisioterapeutaController extends Controller
 {
@@ -12,7 +13,7 @@ class FisioterapeutaController extends Controller
      */
     public function index()
     {
-        //
+        return Inertia::render('Admi/Dentista');
     }
 
     /**

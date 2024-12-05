@@ -1,4 +1,5 @@
-<script >
+<script setup>
+import { Link } from '@inertiajs/vue3';
 </script>
 
 <template>
@@ -386,9 +387,10 @@
                     </div>
                     <ul class="py-1 text-gray-700 dark:text-gray-300" aria-labelledby="dropdown">
                         <li>
-                            <a href="#"
-                                class="block py-2 px-4 text-sm hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white">My
-                                profile</a>
+                            <Link :href="route('profile.edit')"
+                                class="block py-2 px-4 text-sm hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white">
+                                Mi perfil
+                            </Link>
                         </li>
                         <li>
                             <a href="#"
@@ -439,13 +441,14 @@
                                 </svg>
                             </a>
                         </li>
-                    </ul>
+                    </ul>                                    
                     <ul class="py-1 text-gray-700 dark:text-gray-300" aria-labelledby="dropdown">
                         <li>
-                            <a href="#"
-                                class="block py-2 px-4 text-sm hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Sign
-                                out</a>
-                        </li>
+                            <Link :href="route('logout')" method="POST" as="button"
+                                class="block py-2 px-4 text-sm hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
+                            Cerrar Sesión
+                            </Link>
+                        </li>                        
                     </ul>
                 </div>
             </div>

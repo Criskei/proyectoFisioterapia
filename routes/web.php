@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\FisioterapeutaController;
 use App\Http\Controllers\PacienteController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Foundation\Application;
@@ -27,11 +28,13 @@ Route::middleware('auth')->group(function () {
 
 Route::get('/pacientes', [PacienteController::class, 'index'])
     ->middleware(['auth', 'verified'])->name('paciente.index');
-
 Route::get('/paciente/{id}', [PacienteController::class, 'show'])
     ->middleware(['auth', 'verified'])->name('paciente.ver');
-
 Route::get('/pacienteEdit/{id}', [PacienteController::class, 'edit'])
     ->middleware(['auth', 'verified'])->name('paciente.editar');
 
-require __DIR__.'/auth.php';
+
+Route::get('/fisioterapeutas', [FisioterapeutaController::class, 'index'])
+    ->middleware(['auth', 'verified'])->name('fisioterapeuta.index');
+
+require __DIR__ . '/auth.php';
