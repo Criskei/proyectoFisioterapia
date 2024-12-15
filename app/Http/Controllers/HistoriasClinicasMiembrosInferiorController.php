@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\historias_clinicas_miembros_inferior;
+use App\Models\HistoriasClinicasMiembrosInferior;
 use Illuminate\Http\Request;
 
 class HistoriasClinicasMiembrosInferiorController extends Controller
@@ -34,7 +34,7 @@ class HistoriasClinicasMiembrosInferiorController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(historias_clinicas_miembros_inferior $historias_clinicas_miembros_inferior)
+    public function show(HistoriasClinicasMiembrosInferior $HistoriasClinicasMiembrosInferior)
     {
         //
     }
@@ -42,7 +42,7 @@ class HistoriasClinicasMiembrosInferiorController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(historias_clinicas_miembros_inferior $historias_clinicas_miembros_inferior)
+    public function edit(HistoriasClinicasMiembrosInferior $HistoriasClinicasMiembrosInferior)
     {
         //
     }
@@ -50,7 +50,7 @@ class HistoriasClinicasMiembrosInferiorController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, historias_clinicas_miembros_inferior $historias_clinicas_miembros_inferior)
+    public function update(Request $request, HistoriasClinicasMiembrosInferior $HistoriasClinicasMiembrosInferior)
     {
         //
     }
@@ -58,7 +58,7 @@ class HistoriasClinicasMiembrosInferiorController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(historias_clinicas_miembros_inferior $historias_clinicas_miembros_inferior)
+    public function destroy(HistoriasClinicasMiembrosInferior $HistoriasClinicasMiembrosInferior)
     {
         //
     }

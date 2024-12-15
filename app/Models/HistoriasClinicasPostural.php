@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class historias_clinicas_postural extends Model
+class HistoriasClinicasPostural extends Model
 {
     protected $table = 'historias_clinicas_posturales';    
     public $incrementing = false;
@@ -15,7 +15,7 @@ class historias_clinicas_postural extends Model
 
     public function historia_clinica()
     {
-        return $this->belongsTo(historias_clinica::class, 'id_historia', 'id_historia');
+        return $this->belongsTo(HistoriasClinica::class, 'id_historia', 'id_historia');
     }
     
 }

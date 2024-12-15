@@ -49,7 +49,7 @@ const borrarUsuario = (id) => {
                                     <td class="whitespace-nowrap px-6 py-4">{{ p.sitio_web }}</td>
                                     <!-- <td>
                                         <div class="flex flex-nowrap gap-1">
-                                            <Link :href="route('paciente.ver', { id: p.producto_id })">
+                                            <Link :href="route('Paciente.ver', { id: p.producto_id })">
                                             <div
                                                 class="flex w-fit cursor-pointer px-2 py-1 border border-indigo-300 rounded-lg hover:bg-indigo-600 hover:text-white transition duration-300 ease-in-out">
                                                 <p> Ver </p>
@@ -64,7 +64,7 @@ const borrarUsuario = (id) => {
                                             </Link>
 
                                             <Link v-if="$page.props.auth.user.rol_id == 1"
-                                                :href="route('paciente.editar', { id: p.producto_id })">
+                                                :href="route('Paciente.editar', { id: p.producto_id })">
                                             <div
                                                 class="flex w-fit cursor-pointer px-2 py-1 border border-indigo-300 rounded-lg hover:bg-indigo-600 hover:text-white transition duration-300 ease-in-out">
                                                 <p> Editar </p>
@@ -77,7 +77,7 @@ const borrarUsuario = (id) => {
                                             </Link>
 
                                             <Link v-if="$page.props.auth.user.rol_id == 1"
-                                                :href="route('paciente.borrar', { id: id: p.producto_id })">
+                                                :href="route('Paciente.borrar', { id: id: p.producto_id })">
                                             <div
                                                 class="flex w-fit cursor-pointer px-2 py-1 border border-indigo-300 rounded-lg hover:bg-indigo-600 hover:text-white transition duration-300 ease-in-out">
                                                 <p> Borrar </p>

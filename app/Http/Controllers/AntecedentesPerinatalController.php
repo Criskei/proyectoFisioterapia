@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\antecedentes_perinatal;
+use App\Models\AntecedentesPerinatal;
 use Illuminate\Http\Request;
 
 class AntecedentesPerinatalController extends Controller
@@ -34,7 +34,7 @@ class AntecedentesPerinatalController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(antecedentes_perinatal $antecedentes_perinatal)
+    public function show(AntecedentesPerinatal $AntecedentesPerinatal)
     {
         //
     }
@@ -42,7 +42,7 @@ class AntecedentesPerinatalController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(antecedentes_perinatal $antecedentes_perinatal)
+    public function edit(AntecedentesPerinatal $AntecedentesPerinatal)
     {
         //
     }
@@ -50,7 +50,7 @@ class AntecedentesPerinatalController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, antecedentes_perinatal $antecedentes_perinatal)
+    public function update(Request $request, AntecedentesPerinatal $AntecedentesPerinatal)
     {
         //
     }
@@ -58,7 +58,7 @@ class AntecedentesPerinatalController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(antecedentes_perinatal $antecedentes_perinatal)
+    public function destroy(AntecedentesPerinatal $AntecedentesPerinatal)
     {
         //
     }

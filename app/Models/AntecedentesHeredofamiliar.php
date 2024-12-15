@@ -5,15 +5,16 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class antecedentes_heredofamiliar extends Model
+class AntecedentesHeredofamiliar extends Model
 {
     protected $table = 'antecedentes_heredofamiliares';
     protected $primaryKey = 'id_heredofamiliar';
+    public $timestamps = false;
 
     use HasFactory;
 
-    public function paciente()
+    public function Paciente()
     {
-        return $this->belongsTo(paciente::class, 'id_paciente', 'id_paciente');
+        return $this->belongsTo(Paciente::class, 'id_paciente', 'id_paciente');
     }
 }

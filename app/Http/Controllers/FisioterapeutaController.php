@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\fisioterapeuta;
+use App\Models\Fisioterapeuta;
 use Illuminate\Http\Request;
 use Inertia\Inertia;
 
@@ -35,7 +35,7 @@ class FisioterapeutaController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(fisioterapeuta $fisioterapeuta)
+    public function show(Fisioterapeuta $Fisioterapeuta)
     {
         //
     }
@@ -43,7 +43,7 @@ class FisioterapeutaController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(fisioterapeuta $fisioterapeuta)
+    public function edit(Fisioterapeuta $Fisioterapeuta)
     {
         //
     }
@@ -51,7 +51,7 @@ class FisioterapeutaController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, fisioterapeuta $fisioterapeuta)
+    public function update(Request $request, Fisioterapeuta $Fisioterapeuta)
     {
         //
     }
@@ -59,7 +59,7 @@ class FisioterapeutaController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(fisioterapeuta $fisioterapeuta)
+    public function destroy(Fisioterapeuta $Fisioterapeuta)
     {
         //
     }

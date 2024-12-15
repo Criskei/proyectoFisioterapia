@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\historias_clinica;
+use App\Models\HistoriasClinica;
 use Illuminate\Http\Request;
 
 class HistoriasClinicaController extends Controller
@@ -34,7 +34,7 @@ class HistoriasClinicaController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(historias_clinica $historias_clinica)
+    public function show(HistoriasClinica $HistoriasClinica)
     {
         //
     }
@@ -42,7 +42,7 @@ class HistoriasClinicaController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(historias_clinica $historias_clinica)
+    public function edit(HistoriasClinica $HistoriasClinica)
     {
         //
     }
@@ -50,7 +50,7 @@ class HistoriasClinicaController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, historias_clinica $historias_clinica)
+    public function update(Request $request, HistoriasClinica $HistoriasClinica)
     {
         //
     }
@@ -58,7 +58,7 @@ class HistoriasClinicaController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(historias_clinica $historias_clinica)
+    public function destroy(HistoriasClinica $HistoriasClinica)
     {
         //
     }

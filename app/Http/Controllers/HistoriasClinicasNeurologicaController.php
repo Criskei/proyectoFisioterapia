@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\historias_clinicas_neurologica;
+use App\Models\HistoriasClinicasNeurologica;
 use Illuminate\Http\Request;
 
 class HistoriasClinicasNeurologicaController extends Controller
@@ -34,7 +34,7 @@ class HistoriasClinicasNeurologicaController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(historias_clinicas_neurologica $historias_clinicas_neurologica)
+    public function show(HistoriasClinicasNeurologica $HistoriasClinicasNeurologica)
     {
         //
     }
@@ -42,7 +42,7 @@ class HistoriasClinicasNeurologicaController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(historias_clinicas_neurologica $historias_clinicas_neurologica)
+    public function edit(HistoriasClinicasNeurologica $HistoriasClinicasNeurologica)
     {
         //
     }
@@ -50,7 +50,7 @@ class HistoriasClinicasNeurologicaController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, historias_clinicas_neurologica $historias_clinicas_neurologica)
+    public function update(Request $request, HistoriasClinicasNeurologica $HistoriasClinicasNeurologica)
     {
         //
     }
@@ -58,7 +58,7 @@ class HistoriasClinicasNeurologicaController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(historias_clinicas_neurologica $historias_clinicas_neurologica)
+    public function destroy(HistoriasClinicasNeurologica $HistoriasClinicasNeurologica)
     {
         //
     }

@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class ejercicio extends Model
+class Ejercicio extends Model
 {
     protected $table = 'ejercicios';
     protected $primaryKey = 'id_ejercicio';
@@ -13,29 +13,29 @@ class ejercicio extends Model
 
     public function tipo_ejercicio()
     {
-        return $this->belongsTo(tipos_ejercicio::class, 'id_tipo_ejercicio', 'id_tipo_ejercicio');
+        return $this->belongsTo(TiposEjercicio::class, 'id_tipo_ejercicio', 'id_tipo_ejercicio');
     }
 
-    public function dificultad()
+    public function Dificultad()
     {
-        return $this->belongsTo(dificultad::class, 'id_dificultad', 'id_dificultad');
+        return $this->belongsTo(Dificultad::class, 'id_dificultad', 'id_dificultad');
     }
 
     public function tratamientos()
     {
         return $this->belongsToMany(
-            tratamiento::class, 
+            Tratamiento::class, 
             'tratamiento_ejercicios', 
             'id_ejercicio', 
             'id_tratamiento'
         )->withPivot('frecuencia_semanal', 'repeticiones', 'series');
     }
 
-    public function progresos_paciente()
+    public function ProgresosPaciente()
     {
         return $this->hasManyThrough(
-            progresos_paciente::class, 
-            tratamientos_ejercicio::class, 
+            ProgresosPaciente::class, 
+            TratamientosEjercicio::class, 
             'id_ejercicio', 
             'id_tratamiento_ejercicio', 
             'id_ejercicio', 

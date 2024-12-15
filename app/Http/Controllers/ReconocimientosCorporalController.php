@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\reconocimientos_corporal;
+use App\Models\ReconocimientosCorporal;
 use Illuminate\Http\Request;
 
 class ReconocimientosCorporalController extends Controller
@@ -34,7 +34,7 @@ class ReconocimientosCorporalController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(reconocimientos_corporal $reconocimientos_corporal)
+    public function show(ReconocimientosCorporal $ReconocimientosCorporal)
     {
         //
     }
@@ -42,7 +42,7 @@ class ReconocimientosCorporalController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(reconocimientos_corporal $reconocimientos_corporal)
+    public function edit(ReconocimientosCorporal $ReconocimientosCorporal)
     {
         //
     }
@@ -50,7 +50,7 @@ class ReconocimientosCorporalController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, reconocimientos_corporal $reconocimientos_corporal)
+    public function update(Request $request, ReconocimientosCorporal $ReconocimientosCorporal)
     {
         //
     }
@@ -58,7 +58,7 @@ class ReconocimientosCorporalController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(reconocimientos_corporal $reconocimientos_corporal)
+    public function destroy(ReconocimientosCorporal $ReconocimientosCorporal)
     {
         //
     }

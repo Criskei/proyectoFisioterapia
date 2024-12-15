@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\paciente;
+use App\Models\Paciente;
 use Illuminate\Http\Request;
 use Inertia\Inertia;
 
@@ -35,7 +35,7 @@ class PacienteController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(paciente $paciente)
+    public function show(Paciente $Paciente)
     {
         //
     }
@@ -43,7 +43,7 @@ class PacienteController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(paciente $paciente)
+    public function edit(Paciente $Paciente)
     {
         //
     }
@@ -51,7 +51,7 @@ class PacienteController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, paciente $paciente)
+    public function update(Request $request, Paciente $Paciente)
     {
         //
     }
@@ -59,7 +59,7 @@ class PacienteController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(paciente $paciente)
+    public function destroy(Paciente $Paciente)
     {
         //
     }

@@ -44,7 +44,7 @@ const props = defineProps({
                 <tbody>
                     <tr>
                         <td class="label">Paciente</td>
-                        <td>{{ cita.paciente.usuario.nombres }}</td>
+                        <td>{{ cita.Paciente.usuario.nombres }}</td>
                     </tr>
                     <tr class="info-container">
                         <td class="label">Dentista</td>
@@ -150,7 +150,7 @@ const props = defineProps({
                 <template #contenidoTabla>
                     <tr v-for="(t, index) in tratamientos " :key="index">
                         <checkbox />
-                        <contenidoTabla>{{ t.historial_medico.tratamiento.nombre_tratamiento ?? null }}</contenidoTabla>
+                        <contenidoTabla>{{ t.historial_medico.Tratamiento.nombre_tratamiento ?? null }}</contenidoTabla>
                         <contenidoTabla>{{ t.historial_medico.diente.nombre_diente ?? null }}</contenidoTabla>
                         <contenidoTabla>{{ t.historial_medico.estado.nombre_estado ?? null }}</contenidoTabla>
                         <contenidoTabla>{{ t.historial_medico.nota ?? null }}</contenidoTabla>

@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\tipos_ejercicio;
+use App\Models\TiposEjercicio;
 use Illuminate\Http\Request;
 
 class TiposEjercicioController extends Controller
@@ -34,7 +34,7 @@ class TiposEjercicioController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(tipos_ejercicio $tipos_ejercicio)
+    public function show(TiposEjercicio $TiposEjercicio)
     {
         //
     }
@@ -42,7 +42,7 @@ class TiposEjercicioController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(tipos_ejercicio $tipos_ejercicio)
+    public function edit(TiposEjercicio $TiposEjercicio)
     {
         //
     }
@@ -50,7 +50,7 @@ class TiposEjercicioController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, tipos_ejercicio $tipos_ejercicio)
+    public function update(Request $request, TiposEjercicio $TiposEjercicio)
     {
         //
     }
@@ -58,7 +58,7 @@ class TiposEjercicioController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(tipos_ejercicio $tipos_ejercicio)
+    public function destroy(TiposEjercicio $TiposEjercicio)
     {
         //
     }

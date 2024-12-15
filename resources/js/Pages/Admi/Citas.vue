@@ -35,7 +35,7 @@ defineProps({
             <template #contenidoTabla>
                 <tr v-for="(c, index) in citas " :key="index">
                     <checkbox/>
-                    <contenidoTabla>{{ c.paciente.usuario.nombres ?? null }}</contenidoTabla>
+                    <contenidoTabla>{{ c.Paciente.usuario.nombres ?? null }}</contenidoTabla>
                     <contenidoTabla>{{ c.dentista.usuario.nombres ?? null }}</contenidoTabla>
                     <contenidoTabla>{{ c.estado.nombre_estado ?? null }}</contenidoTabla>
                     <contenidoTabla>{{ c.fecha_cita ?? null }}</contenidoTabla>

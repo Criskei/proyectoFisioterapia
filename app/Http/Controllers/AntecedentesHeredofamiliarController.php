@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\antecedentes_heredofamiliar;
+use App\Models\AntecedentesHeredofamiliar;
 use Illuminate\Http\Request;
 
 class AntecedentesHeredofamiliarController extends Controller
@@ -34,7 +34,7 @@ class AntecedentesHeredofamiliarController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(antecedentes_heredofamiliar $antecedentes_heredofamiliar)
+    public function show(AntecedentesHeredofamiliar $AntecedentesHeredofamiliar)
     {
         //
     }
@@ -42,7 +42,7 @@ class AntecedentesHeredofamiliarController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(antecedentes_heredofamiliar $antecedentes_heredofamiliar)
+    public function edit(AntecedentesHeredofamiliar $AntecedentesHeredofamiliar)
     {
         //
     }
@@ -50,7 +50,7 @@ class AntecedentesHeredofamiliarController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, antecedentes_heredofamiliar $antecedentes_heredofamiliar)
+    public function update(Request $request, AntecedentesHeredofamiliar $AntecedentesHeredofamiliar)
     {
         //
     }
@@ -58,7 +58,7 @@ class AntecedentesHeredofamiliarController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(antecedentes_heredofamiliar $antecedentes_heredofamiliar)
+    public function destroy(AntecedentesHeredofamiliar $AntecedentesHeredofamiliar)
     {
         //
     }

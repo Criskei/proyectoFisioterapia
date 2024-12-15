@@ -113,7 +113,7 @@ const props = defineProps({
                 <template #contenidoTabla>
                     <tr v-for="(c, index) in citas " :key="index">
                         <checkbox />
-                        <contenidoTabla>{{ c.paciente.usuario.nombres ?? null }}</contenidoTabla>
+                        <contenidoTabla>{{ c.Paciente.usuario.nombres ?? null }}</contenidoTabla>
                         <contenidoTabla>{{ c.estado.nombre_estado ?? null }}</contenidoTabla>
                         <contenidoTabla>{{ c.fecha_cita ?? null }}</contenidoTabla>
                         <contenidoTabla>{{ c.hora_inicio ?? null }}</contenidoTabla>
@@ -180,8 +180,8 @@ const props = defineProps({
                 <template #contenidoTabla>
                     <tr v-for="(t, index) in tratamientos " :key="index">
                         <checkbox />
-                        <contenidoTabla>{{ t.paciente.usuario.nombres ?? null }}</contenidoTabla>
-                        <contenidoTabla>{{ t.tratamiento.nombre_tratamiento ?? null }}</contenidoTabla>
+                        <contenidoTabla>{{ t.Paciente.usuario.nombres ?? null }}</contenidoTabla>
+                        <contenidoTabla>{{ t.Tratamiento.nombre_tratamiento ?? null }}</contenidoTabla>
                         <contenidoTabla>{{ t.diente.nombre_diente ?? null }}</contenidoTabla>
                         <contenidoTabla>{{ t.estado.nombre_estado ?? null }}</contenidoTabla>
                         <contenidoTabla>{{ t.nota ?? null }}</contenidoTabla>
@@ -248,7 +248,7 @@ const props = defineProps({
                 <template #contenidoTabla>
                     <tr v-for="(d, index) in documentos " :key="index">
                         <checkbox />
-                        <contenidoTabla>{{ d.paciente.usuario.nombres ?? null }}</contenidoTabla>
+                        <contenidoTabla>{{ d.Paciente.usuario.nombres ?? null }}</contenidoTabla>
                         <contenidoTabla>{{ d.nombre ?? null }}</contenidoTabla>
                         <contenidoTabla>{{ d.categoria_documento.nombre ?? null }}</contenidoTabla>
                         <contenidoTabla>{{ d.ruta ?? null }}</contenidoTabla>

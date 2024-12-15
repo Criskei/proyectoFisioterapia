@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\tratamientos_ejercicio;
+use App\Models\TratamientosEjercicio;
 use Illuminate\Http\Request;
 
 class TratamientosEjercicioController extends Controller
@@ -34,7 +34,7 @@ class TratamientosEjercicioController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(tratamientos_ejercicio $tratamientos_ejercicio)
+    public function show(TratamientosEjercicio $TratamientosEjercicio)
     {
         //
     }
@@ -42,7 +42,7 @@ class TratamientosEjercicioController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(tratamientos_ejercicio $tratamientos_ejercicio)
+    public function edit(TratamientosEjercicio $TratamientosEjercicio)
     {
         //
     }
@@ -50,7 +50,7 @@ class TratamientosEjercicioController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, tratamientos_ejercicio $tratamientos_ejercicio)
+    public function update(Request $request, TratamientosEjercicio $TratamientosEjercicio)
     {
         //
     }
@@ -58,7 +58,7 @@ class TratamientosEjercicioController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(tratamientos_ejercicio $tratamientos_ejercicio)
+    public function destroy(TratamientosEjercicio $TratamientosEjercicio)
     {
         //
     }

@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\historias_clinicas_postural;
+use App\Models\HistoriasClinicasPostural;
 use Illuminate\Http\Request;
 
 class HistoriasClinicasPosturalController extends Controller
@@ -34,7 +34,7 @@ class HistoriasClinicasPosturalController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(historias_clinicas_postural $historias_clinicas_postural)
+    public function show(HistoriasClinicasPostural $HistoriasClinicasPostural)
     {
         //
     }
@@ -42,7 +42,7 @@ class HistoriasClinicasPosturalController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(historias_clinicas_postural $historias_clinicas_postural)
+    public function edit(HistoriasClinicasPostural $HistoriasClinicasPostural)
     {
         //
     }
@@ -50,7 +50,7 @@ class HistoriasClinicasPosturalController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, historias_clinicas_postural $historias_clinicas_postural)
+    public function update(Request $request, HistoriasClinicasPostural $HistoriasClinicasPostural)
     {
         //
     }
@@ -58,7 +58,7 @@ class HistoriasClinicasPosturalController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(historias_clinicas_postural $historias_clinicas_postural)
+    public function destroy(HistoriasClinicasPostural $HistoriasClinicasPostural)
     {
         //
     }

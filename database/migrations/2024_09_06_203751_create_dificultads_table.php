@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('dificultades', function (Blueprint $table) {
             $table->id('id_dificultad');
-            $table->integer('nivel')->comment('Nivel de dificultad (1: Fácil, 2: Medio, 3: Difícil)');
+            $table->string('nivel');
             $table->text('descripcion')->nullable();            
             $table->boolean('activo')->default(true);
         });

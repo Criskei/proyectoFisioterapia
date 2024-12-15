@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\progresos_paciente;
+use App\Models\ProgresosPaciente;
 use Illuminate\Http\Request;
 
 class ProgresosPacienteController extends Controller
@@ -34,7 +34,7 @@ class ProgresosPacienteController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(progresos_paciente $progresos_paciente)
+    public function show(ProgresosPaciente $ProgresosPaciente)
     {
         //
     }
@@ -42,7 +42,7 @@ class ProgresosPacienteController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(progresos_paciente $progresos_paciente)
+    public function edit(ProgresosPaciente $ProgresosPaciente)
     {
         //
     }
@@ -50,7 +50,7 @@ class ProgresosPacienteController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, progresos_paciente $progresos_paciente)
+    public function update(Request $request, ProgresosPaciente $ProgresosPaciente)
     {
         //
     }
@@ -58,7 +58,7 @@ class ProgresosPacienteController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(progresos_paciente $progresos_paciente)
+    public function destroy(ProgresosPaciente $ProgresosPaciente)
     {
         //
     }

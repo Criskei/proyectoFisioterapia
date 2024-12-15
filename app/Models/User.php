@@ -13,19 +13,19 @@ class User extends Authenticatable
     protected $primaryKey = 'id_usuario';
     use HasFactory, Notifiable;
 
-    public function rol()
+    public function Rol()
     {
-        return $this->belongsTo(rol::class, 'id_rol', 'id_rol');
+        return $this->belongsTo(Rol::class, 'id_rol', 'id_rol');
     }
 
-    public function peciente()
+    public function Paciente()
     {
-        return $this->hasOne(paciente::class, 'id_usuario', 'id_usuario');
+        return $this->hasOne(Paciente::class, 'id_usuario', 'id_usuario');
     }
 
-    public function fisioterapeuta()
+    public function Fisioterapeuta()
     {
-        return $this->hasOne(fisioterapeuta::class, 'id_usuario', 'id_usuario');
+        return $this->hasOne(Fisioterapeuta::class, 'id_usuario', 'id_usuario');
     }
 
     /**

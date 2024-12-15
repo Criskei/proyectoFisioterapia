@@ -27,14 +27,14 @@ Route::middleware('auth')->group(function () {
 });
 
 Route::get('/pacientes', [PacienteController::class, 'index'])
-    ->middleware(['auth', 'verified'])->name('paciente.index');
-Route::get('/paciente/{id}', [PacienteController::class, 'show'])
-    ->middleware(['auth', 'verified'])->name('paciente.ver');
+    ->middleware(['auth', 'verified'])->name('Paciente.index');
+Route::get('/Paciente/{id}', [PacienteController::class, 'show'])
+    ->middleware(['auth', 'verified'])->name('Paciente.ver');
 Route::get('/pacienteEdit/{id}', [PacienteController::class, 'edit'])
-    ->middleware(['auth', 'verified'])->name('paciente.editar');
+    ->middleware(['auth', 'verified'])->name('Paciente.editar');
 
 
 Route::get('/fisioterapeutas', [FisioterapeutaController::class, 'index'])
-    ->middleware(['auth', 'verified'])->name('fisioterapeuta.index');
+    ->middleware(['auth', 'verified'])->name('Fisioterapeuta.index');
 
 require __DIR__ . '/auth.php';

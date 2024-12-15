@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\Rol;
 use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Facades\Hash;
@@ -25,16 +26,20 @@ class UserFactory extends Factory
      */
     public function definition(): array
     {
+        $faker = \Faker\Factory::create('es_ES');
+
         return [
-            'nombres' => $this->faker->name,
-            'apellidos' => $this->faker->lastName,
+            'nombres' => $faker->firstName,
+            'apellidos' => $faker->lastName . ' ' . $faker->lastName,
             'celular' => $this->faker->numberBetween(70000000, 79999999),
-            'email' => fake()->unique()->safeEmail(),
+            'fecha_nacimiento' => $faker->dateTimeBetween('-60 years', '-18 years'),
+            'direccion' => $faker->address,
+            'email' => $faker->unique()->safeEmail,
             'email_verified_at' => now(),
             'password' => static::$password ??= Hash::make('password'),
             'remember_token' => Str::random(10),
-            'activo' => 1
-        ];
+            'activo' => $faker->boolean(90)
+        ];        
     }
 
     /**

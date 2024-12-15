@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\evaluaciones_dolor;
+use App\Models\EvaluacionesDolor;
 use Illuminate\Http\Request;
 
 class EvaluacionesDolorController extends Controller
@@ -34,7 +34,7 @@ class EvaluacionesDolorController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(evaluaciones_dolor $evaluaciones_dolor)
+    public function show(EvaluacionesDolor $EvaluacionesDolor)
     {
         //
     }
@@ -42,7 +42,7 @@ class EvaluacionesDolorController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(evaluaciones_dolor $evaluaciones_dolor)
+    public function edit(EvaluacionesDolor $EvaluacionesDolor)
     {
         //
     }
@@ -50,7 +50,7 @@ class EvaluacionesDolorController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, evaluaciones_dolor $evaluaciones_dolor)
+    public function update(Request $request, EvaluacionesDolor $EvaluacionesDolor)
     {
         //
     }
@@ -58,7 +58,7 @@ class EvaluacionesDolorController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(evaluaciones_dolor $evaluaciones_dolor)
+    public function destroy(EvaluacionesDolor $EvaluacionesDolor)
     {
         //
     }

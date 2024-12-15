@@ -5,26 +5,26 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class tratamiento extends Model
+class Tratamiento extends Model
 {
     protected $table = 'tratamientos';
     protected $primaryKey = 'id_tratamiento';
     use HasFactory;
 
-    public function paciente()
+    public function Paciente()
     {
-        return $this->belongsTo(paciente::class, 'id_paciente', 'id_paciente');
+        return $this->belongsTo(Paciente::class, 'id_paciente', 'id_paciente');
     }
 
-    public function fisioterapeuta()
+    public function Fisioterapeuta()
     {
-        return $this->belongsTo(fisioterapeuta::class, 'id_fisioterapeuta', 'id_fisioterapeuta');
+        return $this->belongsTo(Fisioterapeuta::class, 'id_fisioterapeuta', 'id_fisioterapeuta');
     }
 
     public function ejercicios()
     {
         return $this->belongsToMany(
-            ejercicio::class, 
+            Ejercicio::class, 
             'tratamiento_ejercicios', 
             'id_tratamiento', 
             'id_ejercicio'

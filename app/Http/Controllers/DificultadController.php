@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\dificultad;
+use App\Models\Dificultad;
 use Illuminate\Http\Request;
 
 class DificultadController extends Controller
@@ -34,7 +34,7 @@ class DificultadController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(dificultad $dificultad)
+    public function show(Dificultad $Dificultad)
     {
         //
     }
@@ -42,7 +42,7 @@ class DificultadController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(dificultad $dificultad)
+    public function edit(Dificultad $Dificultad)
     {
         //
     }
@@ -50,7 +50,7 @@ class DificultadController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, dificultad $dificultad)
+    public function update(Request $request, Dificultad $Dificultad)
     {
         //
     }
@@ -58,7 +58,7 @@ class DificultadController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(dificultad $dificultad)
+    public function destroy(Dificultad $Dificultad)
     {
         //
     }
