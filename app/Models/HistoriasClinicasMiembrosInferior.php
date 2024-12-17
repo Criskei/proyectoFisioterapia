@@ -13,7 +13,7 @@ class HistoriasClinicasMiembrosInferior extends Model
     public $timestamps = false;
     use HasFactory;
 
-    public function historia_clinica()
+    public function historias_clinicas()
     {
         return $this->belongsTo(HistoriasClinica::class, 'id_historia', 'id_historia');
     }

@@ -12,7 +12,7 @@ class Fisioterapeuta extends Model
     public $timestamps = false;
     use HasFactory;
 
-    public function usuario()
+    public function usuarios()
     {
         return $this->belongsTo(User::class, 'id_usuario', 'id_usuario');
     }

@@ -11,7 +11,7 @@ class EvaluacionesDolor extends Model
     protected $primaryKey = 'id_dolor';
     use HasFactory;
 
-    public function historia_clinica()
+    public function historias_clinicas()
     {
         return $this->belongsTo(HistoriasClinica::class, 'id_historia', 'id_historia');
     }

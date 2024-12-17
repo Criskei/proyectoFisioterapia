@@ -17,9 +17,13 @@ class AntecedentesPerinatalSeeder extends Seeder
         $historiasClinicas = HistoriasClinica::all();
 
         foreach($historiasClinicas as $historia){
-            AntecedentesPerinatal::factory()->create([
-                'id_paciente'=>$historia->id_paciente,
-            ]);
+            $existeAntecedente = AntecedentesPerinatal::where('id_paciente', $historia->id_paciente)->exists();
+            
+            if (!$existeAntecedente) {
+                AntecedentesPerinatal::factory()->create([
+                    'id_paciente' => $historia->id_paciente,
+                ]);
+            }
         }
     }
 }

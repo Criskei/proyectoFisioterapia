@@ -11,12 +11,12 @@ class TratamientosEjercicio extends Model
     protected $primaryKey = 'id_tratamiento_ejercicio';
     use HasFactory;
 
-    public function Tratamiento()
+    public function tratamientos()
     {
         return $this->belongsTo(Tratamiento::class, 'id_tratamiento', 'id_tratamiento');
     }
 
-    public function Ejercicio()
+    public function ejercicios()
     {
         return $this->belongsTo(Ejercicio::class, 'id_ejercicio', 'id_ejercicio');
     }

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Paciente;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Inertia\Inertia;
 
@@ -13,7 +14,13 @@ class PacienteController extends Controller
      */
     public function index()
     {
-        return Inertia::render('Admi/Paciente');
+        $pacientes = Paciente::with([
+            'usuarios',
+        ])->get();
+
+        return Inertia::render('Admi/Paciente', [
+            'pacientes' => $pacientes,
+        ]);
     }
 
     /**
@@ -29,15 +36,48 @@ class PacienteController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $fechaActual = now()->toDateString();
+
+        $usuario = User::create([
+            'id_rol' => '3',      
+            'nombres' => $request->nombres,
+            'apellidos' => $request->apellidos,
+            'celular' => $request->celular,
+            'fecha_nacimiento' => $request->fecha_nacimiento,
+            'direccion' => $request->direccion,
+            'sexo' => $request->sexo,
+            'email' => $request->email,
+            'password' => 'contraseña',
+        ]);
+
+        $paciente = $usuario->pacientes()->create([
+            'tutor_nombre' => $request->tutor_nombre,
+            'tutor_parentesco' => $request->tutor_parentesco,
+            'fecha_ingreso' => $fechaActual,
+            'escolaridad' => $request->escolaridad,
+        ]);
+
+        return redirect()->route('Paciente.ver', ['id' => $paciente->id_paciente]);
     }
 
     /**
      * Display the specified resource.
      */
-    public function show(Paciente $Paciente)
+    public function show($id)
     {
-        //
+        $paciente = Paciente::with([
+            'usuarios',
+            'antecedentes_heredofamiliares',
+            'antecedentes_prenatales',
+            'antecedentes_perinatales',
+            'historias_clinicas.fisioterapeutas.usuarios',
+            'tratamientos',
+            'citas'
+        ])->find($id);
+
+        return Inertia::render('Admi/PacienteVer', [
+            'paciente' => $paciente,
+        ]);
     }
 
     /**

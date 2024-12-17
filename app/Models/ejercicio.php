@@ -11,12 +11,12 @@ class Ejercicio extends Model
     protected $primaryKey = 'id_ejercicio';
     use HasFactory;
 
-    public function tipo_ejercicio()
+    public function tipos_ejercicios()
     {
         return $this->belongsTo(TiposEjercicio::class, 'id_tipo_ejercicio', 'id_tipo_ejercicio');
     }
 
-    public function Dificultad()
+    public function dificultades()
     {
         return $this->belongsTo(Dificultad::class, 'id_dificultad', 'id_dificultad');
     }
@@ -31,7 +31,7 @@ class Ejercicio extends Model
         )->withPivot('frecuencia_semanal', 'repeticiones', 'series');
     }
 
-    public function ProgresosPaciente()
+    public function progresos_pacientes()
     {
         return $this->hasManyThrough(
             ProgresosPaciente::class, 

@@ -11,12 +11,12 @@ class ProgresosPaciente extends Model
     protected $primaryKey = 'id_progreso';
     use HasFactory;
 
-    public function tratamiento_ejercicio()
+    public function tratamientos_ejercicios()
     {
         return $this->belongsTo(TratamientosEjercicio::class, 'id_tratamiento_ejercicio', 'id_tratamiento_ejercicio');
     }
 
-    public function reconocimiento_corporal()
+    public function reconocimientos_corporales()
     {
         return $this->hasOne(ReconocimientosCorporal::class, 'id_progreso', 'id_progreso');
     }

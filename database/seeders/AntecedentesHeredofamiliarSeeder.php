@@ -16,10 +16,14 @@ class AntecedentesHeredofamiliarSeeder extends Seeder
     {
         $historiasClinicas = HistoriasClinica::all();
 
-        foreach($historiasClinicas as $historia){
-            AntecedentesHeredofamiliar::factory()->create([
-                'id_paciente'=>$historia->id_paciente,
-            ]);
+        foreach ($historiasClinicas as $historia) {
+            $existeAntecedente = AntecedentesHeredofamiliar::where('id_paciente', $historia->id_paciente)->exists();
+            
+            if (!$existeAntecedente) {
+                AntecedentesHeredofamiliar::factory()->create([
+                    'id_paciente' => $historia->id_paciente,
+                ]);
+            }
         }
     }
 }

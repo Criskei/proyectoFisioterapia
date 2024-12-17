@@ -12,37 +12,37 @@ class HistoriasClinica extends Model
     public $timestamps = false;
     use HasFactory;
 
-    public function Paciente()
+    public function pacientes()
     {
         return $this->belongsTo(Paciente::class, 'id_paciente', 'id_paciente');
     }
 
-    public function Fisioterapeuta()
+    public function fisioterapeutas()
     {
         return $this->belongsTo(Fisioterapeuta::class, 'profesional_registro', 'id_fisioterapeuta');
     }
 
-    public function historia_clinica_neurologica()
+    public function historias_clinicas_neurologicas()
     {
         return $this->hasOne(HistoriasClinicasNeurologica::class, 'id_historia', 'id_historia');
     }
 
-    public function historia_clinica_fractura()
+    public function historias_clinicas_fracturas()
     {
         return $this->hasOne(HistoriasClinicasFractura::class, 'id_historia', 'id_historia');
     }
 
-    public function historia_clinica_miembro_inferior()
+    public function historias_clinicas_miembros_inferiores()
     {
         return $this->hasOne(HistoriasClinicasMiembrosInferior::class, 'id_historia', 'id_historia');
     }
 
-    public function historia_clinica_postural()
+    public function historias_clinicas_posturales()
     {
         return $this->hasOne(HistoriasClinicasPostural::class, 'id_historia', 'id_historia');
     }
 
-    public function evaluacion_dolor()
+    public function evaluaciones_dolores()
     {
         return $this->hasOne(EvaluacionesDolor::class, 'id_historia', 'id_historia');
     }

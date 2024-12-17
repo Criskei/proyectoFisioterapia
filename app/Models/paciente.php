@@ -12,7 +12,15 @@ class Paciente extends Model
     public $timestamps = false;
     use HasFactory;
 
-    public function usuario()
+    protected $fillable = [
+        'tutor_nombre',
+        'tutor_parentesco',
+        'fecha_ingreso',
+        'escolaridad',
+        'observaciones_generales',
+    ];
+
+    public function usuarios()
     {
         return $this->belongsTo(User::class, 'id_usuario', 'id_usuario');
     }
@@ -22,12 +30,12 @@ class Paciente extends Model
         return $this->hasMany(AntecedentesHeredofamiliar::class, 'id_paciente', 'id_paciente');
     }
 
-    public function antecedente_prenatal()
+    public function antecedentes_prenatales()
     {
         return $this->hasOne(AntecedentesPrenatal::class, 'id_paciente', 'id_paciente');
     }
 
-    public function antecedente_perinatal()
+    public function antecedentes_perinatales()
     {
         return $this->hasOne(AntecedentesPerinatal::class, 'id_paciente', 'id_paciente');
     }

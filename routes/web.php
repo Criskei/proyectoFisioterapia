@@ -26,12 +26,16 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-Route::get('/pacientes', [PacienteController::class, 'index'])
+Route::get('/Pacientes', [PacienteController::class, 'index'])
     ->middleware(['auth', 'verified'])->name('Paciente.index');
+Route::post('/Pacientes', [PacienteController::class, 'store']);
 Route::get('/Paciente/{id}', [PacienteController::class, 'show'])
     ->middleware(['auth', 'verified'])->name('Paciente.ver');
-Route::get('/pacienteEdit/{id}', [PacienteController::class, 'edit'])
-    ->middleware(['auth', 'verified'])->name('Paciente.editar');
+    
+// Route::get('/pacienteEditar/{id}', [PacienteController::class, 'edit'])
+//     ->middleware(['auth', 'verified'])->name('Paciente.editar');
+// Route::get('/pacienteBorrar/{id}', [PacienteController::class, 'destroy'])
+//     ->middleware(['auth', 'verified'])->name('Paciente.borrar');
 
 
 Route::get('/fisioterapeutas', [FisioterapeutaController::class, 'index'])

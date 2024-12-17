@@ -13,17 +13,29 @@ class User extends Authenticatable
     protected $primaryKey = 'id_usuario';
     use HasFactory, Notifiable;
 
-    public function Rol()
+    protected $fillable = [
+        'id_rol',
+        'nombres',
+        'apellidos',
+        'celular',
+        'fecha_nacimiento',
+        'direccion',
+        'sexo',
+        'email',
+        'password',
+    ];
+
+    public function roles()
     {
         return $this->belongsTo(Rol::class, 'id_rol', 'id_rol');
     }
 
-    public function Paciente()
+    public function pacientes()
     {
         return $this->hasOne(Paciente::class, 'id_usuario', 'id_usuario');
     }
 
-    public function Fisioterapeuta()
+    public function fisioterapeutas()
     {
         return $this->hasOne(Fisioterapeuta::class, 'id_usuario', 'id_usuario');
     }
@@ -33,11 +45,7 @@ class User extends Authenticatable
      *
      * @var array<int, string>
      */
-    protected $fillable = [
-        'name',
-        'email',
-        'password',
-    ];
+    
 
     /**
      * The attributes that should be hidden for serialization.

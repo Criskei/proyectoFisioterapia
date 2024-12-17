@@ -7,13 +7,12 @@ use Illuminate\Http\Request;
 use Inertia\Inertia;
 
 class FisioterapeutaController extends Controller
-{
-    /**
-     * Display a listing of the resource.
-     */
+{    
     public function index()
     {
-        return Inertia::render('Admi/Dentista');
+        $fisioterapeutas = Fisioterapeuta::with('usuarios')->get();
+
+        return Inertia::render('Admi/Fisioterapeuta', ['fisioterapeutas'=>$fisioterapeutas]);
     }
 
     /**

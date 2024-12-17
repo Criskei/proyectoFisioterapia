@@ -12,7 +12,7 @@ class AntecedentesPerinatal extends Model
     public $timestamps = false;
     use HasFactory;
 
-    public function Paciente()
+    public function pacientes()
     {
         return $this->belongsTo(Paciente::class, 'id_paciente', 'id_paciente');
     }

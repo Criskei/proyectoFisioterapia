@@ -16,9 +16,10 @@ return new class extends Migration
             $table->foreignId('id_rol')->constrained('roles', 'id_rol');
             $table->string('nombres');
             $table->string('apellidos');
-            $table->integer('celular')->nullable();;
+            $table->integer('celular')->nullable();
             $table->date('fecha_nacimiento')->nullable();
             $table->text('direccion')->nullable();
+            $table->char('sexo')->nullable();
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');

@@ -16,7 +16,7 @@ class FisioterapeutaSeeder extends Seeder
     public function run(): void
     {        
         // Obtener usuarios con el rol 'Paciente'
-        $usuariosFisioterapeutas = User::whereHas('rol', function ($query) {
+        $usuariosFisioterapeutas = User::whereHas('roles', function ($query) {
             $query->where('nombre', 'Fisioterapeuta');
         })->get();
 

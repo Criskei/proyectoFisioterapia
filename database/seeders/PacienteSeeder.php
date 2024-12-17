@@ -16,7 +16,7 @@ class PacienteSeeder extends Seeder
     public function run(): void
     {
         // Obtener usuarios con el rol 'Paciente'
-        $usuariosPacientes = User::whereHas('rol', function ($query) {
+        $usuariosPacientes = User::whereHas('roles', function ($query) {
             $query->where('nombre', 'Paciente');
         })->get();
 
