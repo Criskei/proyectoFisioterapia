@@ -24,9 +24,9 @@ import { Link } from '@inertiajs/vue3';
                     </svg>
                     <span class="sr-only">Toggle sidebar</span>
                 </button>
-                <a href="https://flowbite.com" class="flex items-center justify-between mr-4">
-                    <img src="https://flowbite.s3.amazonaws.com/logo.svg" class="mr-3 h-8" alt="Flowbite Logo" />
-                    <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Flowbite</span>
+                <a :href="route('dashboard')" class="flex items-center justify-between mr-4">
+                    <img src="/images/logo.png" class="mr-3 h-8" alt="Flowbite Logo" />
+                    <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Movart</span>
                 </a>
                 <form action="#" method="GET" class="hidden md:block md:pl-2">
                     <label for="topbar-search" class="sr-only">Search</label>
@@ -389,7 +389,7 @@ import { Link } from '@inertiajs/vue3';
                         <li>
                             <Link :href="route('profile.edit')"
                                 class="block py-2 px-4 text-sm hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white">
-                                Mi perfil
+                            Mi perfil
                             </Link>
                         </li>
                         <li>
@@ -441,14 +441,14 @@ import { Link } from '@inertiajs/vue3';
                                 </svg>
                             </a>
                         </li>
-                    </ul>                                    
+                    </ul>
                     <ul class="py-1 text-gray-700 dark:text-gray-300" aria-labelledby="dropdown">
                         <li>
                             <Link :href="route('logout')" method="POST" as="button"
                                 class="block py-2 px-4 text-sm hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
                             Cerrar Sesión
                             </Link>
-                        </li>                        
+                        </li>
                     </ul>
                 </div>
             </div>

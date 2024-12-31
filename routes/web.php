@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\CitaController;
+use App\Http\Controllers\EjercicioController;
 use App\Http\Controllers\FisioterapeutaController;
 use App\Http\Controllers\PacienteController;
 use App\Http\Controllers\ProfileController;
@@ -29,9 +31,11 @@ Route::middleware('auth')->group(function () {
 Route::get('/Pacientes', [PacienteController::class, 'index'])
     ->middleware(['auth', 'verified'])->name('Paciente.index');
 Route::post('/Pacientes', [PacienteController::class, 'store']);
+Route::post('/PacientesPerfil', [PacienteController::class, 'create']);
+Route::post('/PacientesHistoria', [PacienteController::class, 'createHistoria']);
 Route::get('/Paciente/{id}', [PacienteController::class, 'show'])
     ->middleware(['auth', 'verified'])->name('Paciente.ver');
-    
+
 // Route::get('/pacienteEditar/{id}', [PacienteController::class, 'edit'])
 //     ->middleware(['auth', 'verified'])->name('Paciente.editar');
 // Route::get('/pacienteBorrar/{id}', [PacienteController::class, 'destroy'])
@@ -40,5 +44,11 @@ Route::get('/Paciente/{id}', [PacienteController::class, 'show'])
 
 Route::get('/fisioterapeutas', [FisioterapeutaController::class, 'index'])
     ->middleware(['auth', 'verified'])->name('Fisioterapeuta.index');
+
+Route::get('/Ejercicios', [EjercicioController::class, 'index'])
+    ->middleware(['auth', 'verified'])->name('Ejercicios.index');
+
+Route::get('/Citas', [CitaController::class, 'index'])
+    ->middleware(['auth', 'verified'])->name('Citas.index');
 
 require __DIR__ . '/auth.php';

@@ -7,7 +7,7 @@ import ButtonsTableLayout from '@/Layouts/ButtonsTableLayout.vue';
 import { Inertia } from '@inertiajs/inertia';
 
 defineProps({
-    citas: {
+    ejercicios: {
         type: Object,
     },
 });
@@ -32,20 +32,19 @@ const enviarFormulario = () => {
 
 <template>
 
-    <Head title="Citas" />
+    <Head title="Ejercicios" />
 
     <AuthenticatedLayout>
         <TableCRUDLayout>
-            <template #titulo>Citas</template>
+            <template #titulo>Ejercicios</template>
             <template #titulosColummas>
-                <th scope="col" class="p-4">Paciente</th>
-                <th scope="col" class="p-4">Fisioterapeuta</th>
-                <th scope="col" class="p-4">Fecha</th>
-                <th scope="col" class="p-4">Motivo</th>
-                <th scope="col" class="p-4">Estado</th>
+                <th scope="col" class="p-4">Nombre</th>
+                <th scope="col" class="p-4">Descripción</th>
+                <th scope="col" class="p-4">URL del video</th>
+                <th scope="col" class="p-4">Duración estimada</th>
             </template>
             <template #main>
-                <tr v-for="cita in citas" :key="cita.id_cita"
+                <tr v-for="ejercicio in ejercicios" :key="ejercicio.id_ejercicio"
                     class="border-b dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-700">
                     <td class="p-4 w-4">
                         <div class="flex items-center">
@@ -54,11 +53,10 @@ const enviarFormulario = () => {
                             <label for="checkbox-table-search-1" class="sr-only">checkbox</label>
                         </div>
                     </td>
-                    <td>{{ cita.pacientes.usuarios.nombres }}</td>
-                    <td>{{ cita.fisioterapeutas.usuarios.nombres }}</td>
-                    <td>{{ cita.fecha_hora }}</td>
-                    <td>{{ cita.motivo }}</td>
-                    <td>{{ cita.estado }}</td>
+                    <td>{{ ejercicio.nombre }}</td>
+                    <td>{{ ejercicio.descripcion }}</td>
+                    <td>{{ ejercicio.video_tutorial_url }}</td>
+                    <td>{{ ejercicio.duracion_estimada }}</td>
                     <ButtonsTableLayout
                          />
                 </tr>        

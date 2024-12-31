@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\cita;
 use Illuminate\Http\Request;
+use Inertia\Inertia;
 
 class CitaController extends Controller
 {
@@ -12,7 +13,14 @@ class CitaController extends Controller
      */
     public function index()
     {
-        //
+        $citas = cita::with([
+            'pacientes.usuarios',
+            'fisioterapeutas.usuarios'
+        ])->get();
+
+        return Inertia::render('Admi/Citas', [
+            'citas' => $citas,
+        ]);
     }
 
     /**

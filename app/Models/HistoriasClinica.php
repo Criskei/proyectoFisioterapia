@@ -12,6 +12,17 @@ class HistoriasClinica extends Model
     public $timestamps = false;
     use HasFactory;
 
+    protected $fillable = [
+        'id_paciente',
+        'profesional_registro',
+        'tipo_historia',
+        'fecha_registro',
+        'motivo_consulta',
+        'diagnostico_medico',
+        'medicamentos',
+        'examenes_complementarios',
+    ];
+
     public function pacientes()
     {
         return $this->belongsTo(Paciente::class, 'id_paciente', 'id_paciente');

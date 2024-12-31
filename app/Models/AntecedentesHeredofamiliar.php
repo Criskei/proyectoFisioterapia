@@ -13,6 +13,11 @@ class AntecedentesHeredofamiliar extends Model
 
     use HasFactory;
 
+    protected $fillable = [
+        'id_paciente',
+        'descripcion',
+    ];
+
     public function pacientes()
     {
         return $this->belongsTo(Paciente::class, 'id_paciente', 'id_paciente');
